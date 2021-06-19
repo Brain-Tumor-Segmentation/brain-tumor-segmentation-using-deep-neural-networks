@@ -8,7 +8,6 @@ This project presents the use of deep learning and image processing techniques f
 2. Documentation: Contains the documentation of the project.
 3. Project Demo: A 5 minute video demonstration. 
 4. Project Poster: Poster on our project.
-5. Project Presentation: A Power Point Presentation explaning our project, proposed models, goals and objectives.
 
 ## GUI Screenshot
 ![image](https://user-images.githubusercontent.com/40469421/122648631-b38a4a80-d147-11eb-98a3-9aa0f3740a5f.png)
