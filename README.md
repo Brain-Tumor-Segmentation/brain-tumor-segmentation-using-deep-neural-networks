@@ -1,16 +1,24 @@
 # Brain-Tumor-Segmentation-Using-Deep-Neural-Networks
 
 ## Description
-This project presents the use of deep learning and image processing techniques for the segmentation of tumors into various classes. We used a hybrid system of UNET which is a deep neural network and Sobel operator which is an image processing technique for segmentation. Also we verified our results using other two approaches - 2D-VNET and WNET architectures for multiclass segmentation. BRATS dataset is used to train the model which consists of 3D MRIs of the brain. The output is a segmented image of a tumor consisting of three regions which are edema, enhancing tumor and non enhancing tumor.
+This project presents the use of deep learning and image processing techniques for the segmentation of tumors into various classes. We used the following three approaches for tumor segmentation.
+1) The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
+2) The second approach proposes a V-Net model architecture for tumor segmentation.
+3) The third approach proposes a W-Net model architecture for segmentation.
+
+BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the brain. The output is a segmented image of a tumor consisting of three regions which are edema, enhancing tumor and non enhancing tumor.
 
 ## Table of Contents
-1. Codes: Contains all deep learning models
-2. Documentation: Contains the documentation of the project.
-3. Project Demo: A 5 minute video demonstration. 
-4. Project Poster: Poster on our project.
+1. Dataset.
+2. Preprocessing.
+3. First Approach: Sobel and modified U-Net. 
+4. Second approach: V-Net.
+5. Third Approach: W-Net.
+6. Performance Metrics.
+7. Experimentation and Results.
+8. Conclusion.
+9. GUI of the project.
+10. How to run?
 
 ## GUI Screenshot
-![image](https://user-images.githubusercontent.com/40469421/122648631-b38a4a80-d147-11eb-98a3-9aa0f3740a5f.png)
-
-![image](https://user-images.githubusercontent.com/40469421/122648687-df0d3500-d147-11eb-838a-53e98b2ca4bb.png)
 
