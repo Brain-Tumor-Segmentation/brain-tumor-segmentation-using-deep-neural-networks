@@ -5,3 +5,4 @@ sklearn==0.22.2.post1
 skimage==0.16.2
 numpy==1.19.5
 matplotlib==3.2.2
+anvil-uplink==0.3.36
