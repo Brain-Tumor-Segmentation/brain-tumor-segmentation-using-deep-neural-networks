@@ -169,6 +169,6 @@ Link to website: https://bts-seg.anvil.app/
 ### Project Files - [Sobel and Modified U-Net](https://github.com/Brain-Tumor-Segmentation/brain-tumor-segmentation-using-deep-neural-networks/blob/main/Codes/Modified_U_Net_with_sobel_operator.ipynb), [V-Net](https://github.com/Brain-Tumor-Segmentation/brain-tumor-segmentation-using-deep-neural-networks/blob/main/Codes/2D_VNET.ipynb) and [W-net](https://github.com/Brain-Tumor-Segmentation/brain-tumor-segmentation-using-deep-neural-networks/blob/main/Codes/W_net_resblock.ipynb)
 
 1. It is required to open the above IPYNB files in [Google Colaboratory](https://colab.research.google.com/)
-2. The [link](url) has data of first 50 HGG patients. You need to add this folder as a shortcut in Google drive.
-3. Mount the google drive if asked.
+2. The [link](https://drive.google.com/drive/u/2/folders/1sVqDB9aXVr87UIM9g7YktPJxzKOMSDA7) has data of first 50 HGG patients. You need to add this folder as a shortcut in Google drive.
+3. Mount the google drive if asked. Add the correct path to dataset.
 4. Run the IPYNB file.
