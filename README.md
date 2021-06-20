@@ -19,6 +19,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 8. Conclusion.
 9. GUI of the project.
 10. How to run?
+11. Footnotes.
 
 ## 1. Dataset
 1. Data released with multimodal brain tumor segmentation challenge by Medical Image Computing and Computer Assisted Intervention (MICCAI) is used for training.
@@ -162,7 +163,7 @@ Link to website: https://bts-seg.anvil.app/
 ### GUI
 
 1) Download any HGG patient's data (4 modalities' MRI scan) from BraTS 2018 dataset or from the [link](https://drive.google.com/drive/folders/1sVqDB9aXVr87UIM9g7YktPJxzKOMSDA7?usp=sharing). 
-2) Run the [Anvil server IPYNB notebook](https://github.com/Brain-Tumor-Segmentation/brain-tumor-segmentation-using-deep-neural-networks/blob/main/Codes/BTS_anvil_server.ipynb)in Google Colaboratory as it acts as a server for this anvil project. If any error occurs do factory reset runtime and run again. Ensure that all cells are executed without any errors before going to next step. 
+2) Run the [Anvil server IPYNB notebook](https://github.com/Brain-Tumor-Segmentation/brain-tumor-segmentation-using-deep-neural-networks/blob/main/Codes/BTS_anvil_server.ipynb) in Google Colaboratory as it acts as a server for this anvil project. If any error occurs do factory reset runtime and run again. Ensure that all cells are executed without any errors before going to next step. 
 3) Go to [link](https://bts-seg.anvil.app/) and upload the Flair, T1, T1-ce, T2 3D nifti (.nii.gz) files. Enter slice no. as the models are trained on 2D images and predictions are carried out for that particular slice only. The slice no. is expected to be in between 30 and 119 (both 2 included). Submit the data and wait for sometime as prediction is going on in the backend. 
 4) You can view Flair, T1, T1ce, T2 slices of that particular slice no. entered and also the prediction of tumor regions using U-Net, Sobel Operator and modified U-Net model, V-Net, W-Net models. 
 
@@ -172,3 +173,9 @@ Link to website: https://bts-seg.anvil.app/
 2. The [link](https://drive.google.com/drive/u/2/folders/1sVqDB9aXVr87UIM9g7YktPJxzKOMSDA7) has data of first 50 HGG patients. You need to add this folder as a shortcut in Google drive.
 3. Mount the google drive if asked. Add the correct path to dataset.
 4. Run the IPYNB file.
+
+
+### Footnotes
+
+1. You can find all batches of BraTS 2018 HGG data in the [link](https://drive.google.com/drive/folders/1_97pAToVAow2BOaPFvB2qHGCAoyB41m6?usp=sharing) and LGG data in the [link](https://drive.google.com/drive/folders/1l_H6nlGtXHDx4ie5_yg7mpx7gYMdQgfR?usp=sharing).
+2. The saved models trained on first 50 patients HGG data will be found in the [link](https://drive.google.com/drive/folders/1hst3tiH6nk4IexlUiL32eVHvnb_MR7Z7?usp=sharing).
