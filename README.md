@@ -182,3 +182,9 @@ Link to website: https://bts-seg.anvil.app/
 
 1. You can find all batches of BraTS 2018 HGG data in the [link](https://drive.google.com/drive/folders/1_97pAToVAow2BOaPFvB2qHGCAoyB41m6?usp=sharing) and LGG data in the [link](https://drive.google.com/drive/folders/1l_H6nlGtXHDx4ie5_yg7mpx7gYMdQgfR?usp=sharing).
 2. The saved models trained on first 50 patients HGG data will be found in the [link](https://drive.google.com/drive/folders/1hst3tiH6nk4IexlUiL32eVHvnb_MR7Z7?usp=sharing).
+
+## 12. Contributors
+
+Ashwin Mohan, Prajakta Bhosale, Prajakta Joshi, Ashley George.
+Guided by: Prof. Sonal Gore.
+Pimpri Chinchwad College of Engineering, Pune, Maharashtra, India
