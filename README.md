@@ -20,5 +20,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 9. GUI of the project.
 10. How to run?
 
+# 1. Dataset
+
 
 
