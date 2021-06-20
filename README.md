@@ -45,7 +45,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 1.EDGE FEATURE EXTRACTION USING SOBEL OPERATOR
       Image convolution along horizontal and vertical axis 
       
-      ![image](https://user-images.githubusercontent.com/40360231/122669282-3a880300-d1da-11eb-8e6b-909db1d0ec60.png)
+![image](https://user-images.githubusercontent.com/40360231/122669397-bf731c80-d1da-11eb-851c-29c526fddced.png)
       
      
   Why sobel?
