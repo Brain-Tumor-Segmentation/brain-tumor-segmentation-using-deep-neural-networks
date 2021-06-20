@@ -28,7 +28,8 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 3. The dataset has 4 modalities- T1-weighted (T1w), post-contrast T1-weighted (T1ce), T2-weighted (T2), Fluid Attenuated Inversion Recovery (FLAIR).
 4. Ground truth is also included in the dataset
 5. These images are manually segmented by expert neuroradiologist labelled as as enhancing tumor (label 4), peritumoral edema (label 2), and the core (label 1)
-6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.                                                                                7. The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
+6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.
+7. The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
 
 ![image](https://user-images.githubusercontent.com/40360231/122669055-1972e280-d1d9-11eb-94b7-862e6f774ff4.png)
 
