@@ -1,9 +1,0 @@
-services: []
-package_name: Brain_Tumor_Segmentation
-allow_embedding: false
-name: Brain Tumor Segmentation
-runtime_options: {version: 2, client_version: '3', server_version: python3-full}
-metadata: {}
-startup_form: Form1
-db_schema: []
-renamed: true
