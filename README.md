@@ -88,6 +88,9 @@ SUMMARIZING THE MODEL
 
 ## 4. Second approach VNET
 
+![image](https://user-images.githubusercontent.com/40360231/122669445-ffd29a80-d1da-11eb-9a1c-1a6c7cb55e0a.png)
+
+
 1. The VNet model consists of contracting and expanding paths like the UNet model. 
 2. The downsampling and upsampling path consist of 5 residual blocks, each consisting of 1 to 3 convolutional layers.
 3. Each convolutional layer at downsampling residual block uses kernels having size 5×5 voxels with stride 2, followed by batch normalization and activation function Parametric 
@@ -102,10 +105,17 @@ SUMMARIZING THE MODEL
 
 ## 5.Third Approach WNET
 
+![image](https://user-images.githubusercontent.com/40360231/122669458-18db4b80-d1db-11eb-9a1b-e58b65520d88.png)
+
+
 1. Our WNet model consists of two bridged UNet.The contracting and expanding path of each UNet contains 5 blocks,each having convolution layer with kernels size 3×3
    voxels,followed by residual block , Rectified Linear Units(ReLU) activation function and a pooling layer with stride 2. 
 
 2. The residual block helps to preserve the location information of pixels while downsampling. It learns from the residue of true output and the input.
+
+![image](https://user-images.githubusercontent.com/40360231/122669488-41fbdc00-d1db-11eb-943d-5b00ffb4b0dc.png)
+
+
 3. At the end sigmoid activation function is applied on the output layer. While training the model we included a dropout of 0.2 and Adam optimizer with learning rate of 1e-5.
 
 ## 6. Performance Metrics
@@ -119,6 +129,9 @@ Where, GT is the standard ground truth for brain tumor, SEG is the predicted seg
 
 1. Data split into 3:1:1- 60% images for training, 20% images for testing, and 20% for validation.
 2. All the models are trained with batch size-8 and no of epochs-30
+
+![image](https://user-images.githubusercontent.com/40360231/122669512-635cc800-d1db-11eb-8996-9f80a6e3945c.png)
+
 
 ## 8. Conclusion
 
