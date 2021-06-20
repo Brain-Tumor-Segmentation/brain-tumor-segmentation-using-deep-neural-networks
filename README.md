@@ -6,8 +6,8 @@ This project presents the use of deep learning and image processing techniques f
 2) The second approach proposes a V-Net model architecture for tumor segmentation.
 3) The third approach proposes a W-Net model architecture for tumor segmentation.
 
-
 ## 1. Dataset
+
 1. Data released with multimodal brain tumor segmentation challenge by Medical Image Computing and Computer Assisted Intervention (MICCAI) is used for training.
 2. 3D dataset consists of pre surgical MRI scans of 210 High-Grade Glioma (HGG) patients and 75 Low-Grade Glioma (LGG).
 3. The dataset has 4 modalities- T1-weighted (T1w), post-contrast T1-weighted (T1ce), T2-weighted (T2), Fluid Attenuated Inversion Recovery (FLAIR).
@@ -15,7 +15,6 @@ This project presents the use of deep learning and image processing techniques f
 5. These images are manually segmented by expert neuroradiologist labelled as as enhancing tumor (label 4), peritumoral edema (label 2), and the core (label 1)
 6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.
 7. The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
-8. 
 
 ## 2. Pre-Processing
 
@@ -33,17 +32,11 @@ The models were trained using 3 approaches:
 2) The second approach proposes a V-Net model architecture for tumor segmentation.
 3) The third approach proposes a W-Net model architecture for tumor segmentation.
 
-
 ## 4. Experimentation and Results
 
 1. HGG consists of data of 210 patients. The models were trained in batches of 50 patients.
 2. Data split into 3:1:1- 60% images for training, 20% images for testing, and 20% for validation.
-3. All the models are trained with batch size-8 and no of epochs-30
-
-![image](https://user-images.githubusercontent.com/40360231/122669512-635cc800-d1db-11eb-8996-9f80a6e3945c.png)
-
-![image](https://user-images.githubusercontent.com/40360231/122670113-e717b400-d1dd-11eb-9ac1-883e4e92fd52.png)
-
+3. All the models are trained with batch size-8 and no of epochs-30.
 
 ## 5. Conclusion
 
