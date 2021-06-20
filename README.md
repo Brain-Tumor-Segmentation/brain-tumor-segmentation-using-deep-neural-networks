@@ -15,9 +15,7 @@ This project presents the use of deep learning and image processing techniques f
 5. These images are manually segmented by expert neuroradiologist labelled as as enhancing tumor (label 4), peritumoral edema (label 2), and the core (label 1)
 6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.
 7. The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
-
-![image](https://user-images.githubusercontent.com/40360231/122669055-1972e280-d1d9-11eb-94b7-862e6f774ff4.png)
-
+8. 
 
 ## 2. Pre-Processing
 
