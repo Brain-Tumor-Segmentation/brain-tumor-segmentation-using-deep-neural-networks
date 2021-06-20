@@ -40,7 +40,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 3. Only 90 slices (slice no 30 to slice no 120) from each volume are selected.
 4. These slices cropped to  192×192 (Background noise)
 5. 18,900 2D images of each MRI modality. (210 HGG data × 90 slices = 18900)
-6. Total images for a ll modalities will become 75,600. (210 HGG data × 90 slices × 4 modalities = 756000 images
+6. Total images for all modalities will become 75,600. (210 HGG data × 90 slices × 4 modalities = 756000 images
 
 ## 3. First Approach- Sobel and Modified Unet
 
@@ -51,9 +51,10 @@ Image convolution along horizontal and vertical axis
 ![image](https://user-images.githubusercontent.com/40360231/122669397-bf731c80-d1da-11eb-851c-29c526fddced.png)
       
      
-  Why sobel is used?
-     -Good smoothing effect to random noise
-     -Better appearance of tumor region edges due to differential of two rows and two columns
+_ Why sobel is used?_
+ 
+ 1. Good smoothing effect to random noise
+ 2. Better appearance of tumor region edges due to differential of two rows and two columns
      
 **MODEL DESCRIPTION**
 
