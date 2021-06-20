@@ -21,24 +21,25 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 10. How to run?
 
 ## 1. Dataset
-1. Data released with multimodal brain tumor segmentation challenge by Medical Image Computing and Computer Assisted Intervention (MICCAI)
+1. Data released with multimodal brain tumor segmentation challenge by Medical Image Computing and Computer Assisted Intervention (MICCAI) is used for training.
 2. 3D dataset consists of pre surgical MRI scans of 210 High-Grade Glioma (HGG) patients and 75 Low-Grade Glioma (LGG).
-3. 4 modalities- T1-weighted (T1w), post-contrast T1-weighted (T1ce), T2-weighted (T2), Fluid Attenuated Inversion Recovery (FLAIR).
-4. Ground truth included
+3. The dataset has 4 modalities- T1-weighted (T1w), post-contrast T1-weighted (T1ce), T2-weighted (T2), Fluid Attenuated Inversion Recovery (FLAIR).
+4. Ground truth is also included in the dataset
 5. These images are manually segmented by expert neuroradiologist labelled as as enhancing tumor (label 4), peritumoral edema (label 2), and the core (label 1)
 6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.
+7.The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
 
 ![image](https://user-images.githubusercontent.com/40360231/122669055-1972e280-d1d9-11eb-94b7-862e6f774ff4.png)
 
 
 ## 2. Pre-Processing
 
-1. Each 3D volume -240×240×155
-2. 3D image sliced- 155 slices
-3. Only 90 slices from each volume selected( covering max tumor area)
+1. Each 3D volume of 4 has a size of 240×240×155 for all modalities and ground truth.
+2. After slicing we will get 155 2D images of size 240×240 size.
+3. Only 90 slices (slice no 30 to slice no 120) from each volume are selected.
 4. These slices cropped to  192×192 (Background noise)
-5. 18,900 2D images of each MRI modality
-6. Total images-75,600
+5. 18,900 2D images of each MRI modality. (210 HGG data × 90 slices = 18900)
+6. Total images for a ll modalities will become 75,600. (210 HGG data × 90 slices × 4 modalities = 756000 images
 
 ## 3. First Approach- Sobel and Modified Unet
 
@@ -48,9 +49,10 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 ![image](https://user-images.githubusercontent.com/40360231/122669397-bf731c80-d1da-11eb-851c-29c526fddced.png)
       
      
-  Why sobel?
+  Why sobel is used?
      -Good smoothing effect to random noise
      -Better appearance of tumor region edges due to differential of two rows and two columns
+     
 2. MODEL DESCRIPTION
 Encoding part- performs downsampling and Decoding part-upsampling.
 Down sampling is for context(tumor in this case) and up sampling is for localization(position).
@@ -159,18 +161,74 @@ Link to website: https://bts-seg.anvil.app/
 ![image](https://user-images.githubusercontent.com/40360231/122670180-407fe300-d1de-11eb-9769-2856ae3d07ab.png)
 
 
-###  GUI 
+### Description and objective of the GUI 
 
 The GUI consists of an anvil-app that acts as a client and a Google colaboratory notebook that acts as a server (back-end) for the anvil app. The anvil app takes the 3D MRI nifti (.nii.gz) files of 4 modalities (Flair, T1, T1ce, T2) and slice no. and passes them to server. The server downloads the deep learning models, do predictions of that particular slice and sends the image of slices of 4 modalities as well as the prediction of tumor region using 4 different models (U-Net, sobel and modified U-Net, V-Net and W-Net) to frontend. The anvil app (front-end) displays the images. 
 
- 
+#### Following steps are performed to perform the above task 
+1) Client: Takes four modalities 3D MRI files and slice no. as input and pass them to server 
+2) Server: 
+a) The server downloads the pre-trained deep learning models using wget. b) The server is linked to an anvil app. 
+c) The server receives the four modality files and slice no. 
+d) It extracts the 2D slices of slice no from each of the 4 modalities and also crop them to a shape of 192 X 192. 
+e) Apply sobel operator on the slices. 
+f) The slices on which sobel operator is applied are given to Sobel-Modified U-Net model whereas the original 2D slices are remaining models (U-Net, V-Net, W-Net) for prediction. 
+g) Save the generated 4 predicted images using different models (U-Net, sobel and modified U-Net, V-Net and W-Net) and also slices of given slice no. of 4 modalities(Flair, T1, T1ce, T2). 
+h) Pass all the 8 images to client anvil-app. 
+3) Client: Display all the received images at the front-end. 
 
-#### Links
+#### How to Run? 
+1) Download any HGG patient's data (4 modalities' MRI scan) from BraTS 2018 dataset or from the link. 
+2) Run the Google colaboratory as it acts as a server for this anvil project. If any error occurs do factory reset runtime and run again. Ensure that all cells are executed without any errors before going to next step. 
+3) Go to link and upload the Flair, T1, T1-ce, T2 3D nifti (.nii.gz) files. Enter slice no. as the models are trained on 2D images and predictions are carried out for that particular slice only. The slice no. is expected to be in between 30 and 119 (both 2 included). Submit the data and wait for sometime as prediction is going on in the backend. 
+4) You can view Flair, T1, T1ce, T2 slices of that particular slice no. entered and also the prediction of tumor regions using U-Net, Sobel Operator and modified U-Net model, V-Net, W-Net models. 
 
-1. BRATS Dataset- 
-2. Anvil server google colaboratory link-
-3. Project link
-  
+### Description and objective of prediction using MD-Net With Sobel Operator 
+This module takes HGG dataset of first 50 patients as input and generates a model for prediction of tumor region. It shows predictions of some sample images and displays the dice score and accuracy of the model. The model is then saved in google drive. 
+
+#### Following steps are performed to perform the above task 
+1) Load the HGG images of BRaTS 2018 dataset. 
+2) Slice the images, take central 90 slices (30-120) and eliminate rest of them. 3) Crop the images to eliminate the background. 
+4) Save the generated numpy images so that it can be used for further models. 5) Pass all the images through Sobel Operator for edge clarification. 6) Create Modified deep U-shaped Net(MD-Unet) model. 
+7) Train the U-Net model using cropped images, with dice loss as a loss function and dice coefficient, no of epochs = 30, batch size = 8. Optimizer used is Adam optimizer with learning rate of 10^-5. 
+8) Show some predictions, accuracy and loss graph. 
+9) Save the trained U-Net model in Google drive. 
+
+#### How to Run? 
+1) Go to dataset link and add this folder as a shortcut to drive. 
+2) Run the collaboratory project. Also, mount the google drive when asked. 
+3) 3) The U-Net Model will be saved in your google drive. 
+
+### Description and objective of prediction using V-Net Model 
+This module takes HGG dataset of first 50 patients as input and generates a V-Net model for prediction of tumor region. It shows predictions of some sample images and displays the dice score and accuracy of the model. The model is then saved in google drive
+
+#### Following steps are performed to perform the above task 
+1) Load the HGG images of BRaTS 2018 dataset. 
+2) Slice the images, take central 90 slices (30-120) and eliminate rest of them. 6) Crop the images to eliminate the background. 
+3) Create the V-Net Model. 
+4) Train the V-Net model using cropped images, with dice loss as a loss function and dice coefficient, no of epochs = 30, batch size = 8. Optimizer used is Adam optimizer with learning rate of 10^-5. 
+5) Show some predictions, accuracy and loss graph. 
+6)Save the trained V-Net model in Google drive
+
+#### How to Run?
+1) Go to dataset link and add this folder as a shortcut to drive. 
+2) Run the colaboratory project. Also, mount the google drive when asked. 
+3) 3) The U-Net Model will be saved in your google drive. 
+
+### Description and objective of prediction using W-Net Model 
+This module takes HGG dataset of first 50 patients as input and generates a V-Net model for prediction of tumor region. It shows predictions of some sample images and displays the dice score and accuracy of the model. The model is then saved in google drive. 
+
+#### Following steps are performed to perform the above task 
+1) Load the HGG images of BRaTS 2018 dataset. 
+2) Slice the images, take central 90 slices (30-120) and eliminate rest of them. 3) Crop the images to eliminate the background. 
+4) Create the W-Net Model. 
+5) Train the W-Net model using cropped images, with dice loss as a loss function and dice coefficient, no of epochs = 30, batch size = 8. Optimizer used is Adam optimizer with learning rate of 10^-5. 
+6) Show some predictions, accuracy and loss graph. 
+7) Save the trained W-Net model in Google drive.
+
+#### How to Run?
+1) Go to dataset link and add this folder as a shortcut to drive. 
+2) Run the colaboratory project. Also, mount the google drive when asked. 3) The U-Net Model will be saved in your google drive. 
 
 
 
