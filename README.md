@@ -132,6 +132,9 @@ Where, GT is the standard ground truth for brain tumor, SEG is the predicted seg
 
 ![image](https://user-images.githubusercontent.com/40360231/122669512-635cc800-d1db-11eb-8996-9f80a6e3945c.png)
 
+![image](https://user-images.githubusercontent.com/40360231/122670113-e717b400-d1dd-11eb-9ac1-883e4e92fd52.png)
+
+
 
 ## 8. Conclusion
 
