@@ -165,11 +165,12 @@ The GUI consists of an anvil-app that acts as a client and a Google colaboratory
 
  
 
-#### How to Run? 
-1) Download any HGG patient's data (4 modalities' MRI scan) from BraTS 2018 dataset or from the link . 
-2) Run the Google colaboratory as it acts as a server for this anvil project. If any error occurs do factory reset runtime and run again. Ensure that all cells are executed without any errors before going to next step. 
-3) Go to link and upload the Flair, T1, T1-ce, T2 3D nifti (.nii.gz) files. Enter slice no. as the models are trained on 2D images and predictions are carried out for that particular slice only. The slice no. is expected to be in between 30 and 119 (both 2 included). Submit the data and wait for sometime as prediction is going on in the backend. 
-4) You can view Flair, T1, T1ce, T2 slices of that particular slice no. entered and also the prediction of tumor regions using U-Net, Sobel Operator and modified U-Net model, V-Net, W-Net models.  
+#### Links
+
+1. BRATS Dataset- 
+2. Anvil server google colaboratory link-
+3. Project link
+  
 
 
 
