@@ -20,6 +20,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 9. GUI of the project.
 10. How to run?
 11. Footnotes.
+12. Contibutors
 
 ## 1. Dataset
 1. Data released with multimodal brain tumor segmentation challenge by Medical Image Computing and Computer Assisted Intervention (MICCAI) is used for training.
