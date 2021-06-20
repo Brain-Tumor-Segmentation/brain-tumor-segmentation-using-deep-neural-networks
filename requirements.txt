@@ -1,1 +1,7 @@
 python==3.9.5
+SimpleITK==2.0.2
+keras==2.5.0
+sklearn==0.22.2.post1
+skimage==0.16.2
+numpy==1.19.5
+matplotlib==3.2.2
