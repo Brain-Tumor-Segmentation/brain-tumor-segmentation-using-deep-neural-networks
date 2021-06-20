@@ -44,6 +44,9 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 
 1.EDGE FEATURE EXTRACTION USING SOBEL OPERATOR
       Image convolution along horizontal and vertical axis 
+      
+      ![image](https://user-images.githubusercontent.com/40360231/122669282-3a880300-d1da-11eb-8e6b-909db1d0ec60.png)
+
       Why sobel?
       -Good smoothing effect to random noise
       -Better appearance of tumor region edges due to differential of two rows and two columns
@@ -51,6 +54,9 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 Encoding part- performs downsampling and Decoding part-upsampling.
 Down sampling is for context(tumor in this case) and up sampling is for localization(position).
 Modified deep U-shaped Network (md-UNET) with multiple skipped connections.
+
+![image](https://user-images.githubusercontent.com/40360231/122669332-74590980-d1da-11eb-8794-27c2243056a2.png)
+
 
 ENCODER PART
 
