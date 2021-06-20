@@ -58,13 +58,13 @@ The models were trained using 3 approaches:
     99.64% with WNET** architecture on training the dataset through our system.
 
  
-## 9. GUI of Project
+## 6. GUI of Project
 
 ![image](https://user-images.githubusercontent.com/40360231/122669670-12010880-d1dc-11eb-8845-bd2b2aef5b00.png)
 
 Link to website: https://bts-seg.anvil.app/
 
-## 10. How to Run?
+## 7. How to Run?
  
 ### GUI
 
@@ -81,12 +81,12 @@ Link to website: https://bts-seg.anvil.app/
 4. Run the IPYNB file.
 
 
-## 11. Footnotes
+## 8. Footnotes
 
 1. You can find all batches of BraTS 2018 HGG data in the [link](https://drive.google.com/drive/folders/1_97pAToVAow2BOaPFvB2qHGCAoyB41m6?usp=sharing) and LGG data in the [link](https://drive.google.com/drive/folders/1l_H6nlGtXHDx4ie5_yg7mpx7gYMdQgfR?usp=sharing).
 2. The saved models trained on first 50 patients HGG data will be found in the [link](https://drive.google.com/drive/folders/1hst3tiH6nk4IexlUiL32eVHvnb_MR7Z7?usp=sharing).
 
-## 12. Contributors
+## 9. Contributors
 
 [Ashwin Mohan](mailto:mohanashwin999@gmail.com), [Prajakta Bhosale](mailto:prajatabhosale3333@gmail.com), [Prajakta Joshi](mailto:prajakta.joshi1999@gmail.com), [Ashley George](mailto:ashleygeorge1999@gmail.com) - Pimpri Chinchwad College of Engineering, Pune, Maharashtra India.
 
