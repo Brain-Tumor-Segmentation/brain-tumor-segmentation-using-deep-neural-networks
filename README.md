@@ -62,7 +62,7 @@ Modified deep U-shaped Network (md-UNET) with multiple skipped connections.
 ![image](https://user-images.githubusercontent.com/40360231/122669332-74590980-d1da-11eb-8794-27c2243056a2.png)
 
 
-ENCODER PART
+**ENCODER PART**
 
 -Five blocks of consecutive convolutional layers.
 -Each block has two 3×3 convolutional layers with same padding and activation function as ReLU (Rectified Linear Unit), each followed by a batch normalization layer and a
@@ -70,7 +70,7 @@ ENCODER PART
 -A dropout layer with dropout rate of 20% is placed after two blocks to avoid overfitting.
 -6th block acts as a bridge between the encoding and the decoding part, which consists of a 3×3 convolutional layer with same padding and ReLU activation function
 
-DECODER PART
+**DECODER PART**
 
 -Decoder part too has 5 consecutive blocks.
 -Each block has a convolutional transpose layer of 3×3 with same padding and ReLU activation function merged with skip connection from previous encoder part, followed by a
@@ -78,7 +78,7 @@ DECODER PART
 -Dropout Layer present after two blocks.
 -Output layer with softmax activation function used for classification.
 
-SUMMARIZING THE MODEL
+**SUMMARIZING THE MODEL**
 
 1. No of activation filters used are 32, 64, 128, 256, 512 in five consecutive blocks of both encoder and decoder.
 2. 1024 activation kernels at the center.
@@ -175,7 +175,7 @@ Link to website: https://bts-seg.anvil.app/
 4. Run the IPYNB file.
 
 
-### Footnotes
+## 11. Footnotes
 
 1. You can find all batches of BraTS 2018 HGG data in the [link](https://drive.google.com/drive/folders/1_97pAToVAow2BOaPFvB2qHGCAoyB41m6?usp=sharing) and LGG data in the [link](https://drive.google.com/drive/folders/1l_H6nlGtXHDx4ie5_yg7mpx7gYMdQgfR?usp=sharing).
 2. The saved models trained on first 50 patients HGG data will be found in the [link](https://drive.google.com/drive/folders/1hst3tiH6nk4IexlUiL32eVHvnb_MR7Z7?usp=sharing).
