@@ -156,6 +156,9 @@ Link to website: https://bts-seg.anvil.app/
 
 ## 10. How to Run?
 
+![image](https://user-images.githubusercontent.com/40360231/122670180-407fe300-d1de-11eb-9769-2856ae3d07ab.png)
+
+
 ### Description and objective of the GUI 
 
 The GUI consists of an anvil-app that acts as a client and a Google colaboratory notebook that acts as a server (back-end) for the anvil app. The anvil app takes the 3D MRI nifti (.nii.gz) files of 4 modalities (Flair, T1, T1ce, T2) and slice no. and passes them to server. The server downloads the deep learning models, do predictions of that particular slice and sends the image of slices of 4 modalities as well as the prediction of tumor region using 4 different models (U-Net, sobel and modified U-Net, V-Net and W-Net) to frontend. The anvil app (front-end) displays the images. 
