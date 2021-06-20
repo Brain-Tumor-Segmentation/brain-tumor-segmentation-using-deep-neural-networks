@@ -51,7 +51,7 @@ Image convolution along horizontal and vertical axis
 ![image](https://user-images.githubusercontent.com/40360231/122669397-bf731c80-d1da-11eb-851c-29c526fddced.png)
       
      
-_ Why sobel is used?_
+_Why sobel is used?_
  
  1. Good smoothing effect to random noise
  2. Better appearance of tumor region edges due to differential of two rows and two columns
