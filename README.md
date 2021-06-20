@@ -185,10 +185,6 @@ Link to website: https://bts-seg.anvil.app/
 
 ## 12. Contributors
 
-Ashwin Mohan, Prajakta Bhosale, Prajakta Joshi, Ashley George
+Ashwin Mohan, Prajakta Bhosale, Prajakta Joshi, Ashley George - Pimpri Chinchwad College of Engineering, Pune, Maharashtra India.
 
-Pimpri Chinchwad College of Engineering, Pune, Maharashtra India.
-
-**Guided by:** Prof. Sonal Gore.
-
-Pimpri Chinchwad College of Engineering, Pune, Maharashtra, India
+**Guided by:** Prof. Sonal Gore - Pimpri Chinchwad College of Engineering, Pune, Maharashtra, India.
