@@ -90,7 +90,7 @@ Modified deep U-shaped Network (md-UNET) with multiple skipped connections.
 4. 21 Convolutional layers
 5. 10 layers of batch normalization 
 6. 5 layers of maximum pooling and there is finally one convolutional layer at the bridge point of U-shaped network.
-7. ptimizer used- ADAM.
+7. Optimizer used- ADAM.
 8. Loss function- DICE.
 
 ## 4. Second approach VNET
