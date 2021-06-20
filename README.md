@@ -28,8 +28,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 3. The dataset has 4 modalities- T1-weighted (T1w), post-contrast T1-weighted (T1ce), T2-weighted (T2), Fluid Attenuated Inversion Recovery (FLAIR).
 4. Ground truth is also included in the dataset
 5. These images are manually segmented by expert neuroradiologist labelled as as enhancing tumor (label 4), peritumoral edema (label 2), and the core (label 1)
-6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.                                                                                 
-7.The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
+6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.                                                                                7. The HGG consists of 210 patients data. The deep learning models were trained in the batches of 50 patients due to limitations of Google Colaboratory.
 
 ![image](https://user-images.githubusercontent.com/40360231/122669055-1972e280-d1d9-11eb-94b7-862e6f774ff4.png)
 
@@ -127,11 +126,11 @@ Modified deep U-shaped Network (md-UNET) with multiple skipped connections.
 
 ## 6. Performance Metrics
 
-Dice Coefficient and Dice Loss
-	  	**Dice Coefficient = (2 × | GT ∩ SEG | ) / (GT2 + SEG2 + ε)**
+**Dice Coefficient = (2 × | GT ∩ SEG | ) / (GT^2 + SEG^2 + ε)**
 Where, 	GT is the standard ground truth for brain tumor,
 	SEG is the predicted segmented tumorous region and ε=1e-6.
-	LDice = 1 - Dice Coefficient
+	
+**Dice-Loss = 1 - Dice Coefficient**
 
 ## 7. Experimentation and Results
 
@@ -149,11 +148,12 @@ Where, 	GT is the standard ground truth for brain tumor,
 1. Several Deep Learning and Image processing techniques were studied in the due course of the project. 
 2. We completed research work with current usage of techniques in image preprocessing, image segmentation, common feature extraction and classification recently used were
    analyzed and studied. We choose in total 3 systems-
-      SOBEL + MD-UNET (Dice score-0.9918)
-      2D -VNET (Dice score-0.9947)
-      WNET (Dice score-0.9964)
-3. The output we received is of tumor region highlighted into three regions which are edema, enhancing tumor and non enhancing tumor. We achieved the highest dice score of
-    99.64% with WNET architecture on training the dataset through our system.
+      
+      i. SOBEL + MD-UNET (Dice score-0.9918)
+      ii. 2D -VNET (Dice score-0.9947)
+      iii. **WNET (Dice score-0.9964)**
+3. The output we received is of tumor region highlighted into three regions which are edema, enhancing tumor and non enhancing tumor. We achieved the **highest dice score of
+    99.64% with WNET** architecture on training the dataset through our system.
 
  
 ## 9. GUI of Project
