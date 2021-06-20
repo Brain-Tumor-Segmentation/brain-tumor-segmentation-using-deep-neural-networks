@@ -46,10 +46,11 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
       Image convolution along horizontal and vertical axis 
       
       ![image](https://user-images.githubusercontent.com/40360231/122669282-3a880300-d1da-11eb-8e6b-909db1d0ec60.png)
-
-      Why sobel?
-      -Good smoothing effect to random noise
-      -Better appearance of tumor region edges due to differential of two rows and two columns
+      
+     
+  Why sobel?
+     -Good smoothing effect to random noise
+     -Better appearance of tumor region edges due to differential of two rows and two columns
 2. MODEL DESCRIPTION
 Encoding part- performs downsampling and Decoding part-upsampling.
 Down sampling is for context(tumor in this case) and up sampling is for localization(position).
