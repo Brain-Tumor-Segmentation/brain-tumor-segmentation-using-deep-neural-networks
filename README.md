@@ -28,7 +28,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 5. These images are manually segmented by expert neuroradiologist labelled as as enhancing tumor (label 4), peritumoral edema (label 2), and the core (label 1)
 6. Presence of Multiple tumor region is more visible with HGG than LGG- thus only HGGs are used.
 
-##2. Pre-Processing
+## 2. Pre-Processing
 
 1. Each 3D volume -240×240×155
 2. 3D image sliced- 155 slices
@@ -37,7 +37,7 @@ BRATS 2018 dataset is used to train the model which consists of 3D MRIs of the b
 5. 18,900 2D images of each MRI modality
 6. Total images-75,600
 
-##3. First Approach- Sobel and Modified Unet
+## 3. First Approach- Sobel and Modified Unet
 
 1.EDGE FEATURE EXTRACTION USING SOBEL OPERATOR
       Image convolution along horizontal and vertical axis 
@@ -76,7 +76,7 @@ SUMMARIZING THE MODEL
 7. ptimizer used- ADAM.
 8. Loss function- DICE.
 
-##4. Second approach VNET
+## 4. Second approach VNET
 
 1. The VNet model consists of contracting and expanding paths like the UNet model. 
 2. The downsampling and upsampling path consist of 5 residual blocks, each consisting of 1 to 3 convolutional layers.
@@ -90,7 +90,7 @@ SUMMARIZING THE MODEL
 8. Finally softmax activation function is applied on the output layer.
 9. We have used Adam optimizer with a learning rate of 2e-4 while training this model.
 
-##5.Third Approach WNET
+## 5.Third Approach WNET
 
 1. Our WNet model consists of two bridged UNet.The contracting and expanding path of each UNet contains 5 blocks,each having convolution layer with kernels size 3×3
    voxels,followed by residual block , Rectified Linear Units(ReLU) activation function and a pooling layer with stride 2. 
@@ -98,19 +98,19 @@ SUMMARIZING THE MODEL
 2. The residual block helps to preserve the location information of pixels while downsampling. It learns from the residue of true output and the input.
 3. At the end sigmoid activation function is applied on the output layer. While training the model we included a dropout of 0.2 and Adam optimizer with learning rate of 1e-5.
 
-##6. Performance Metrics
+## 6. Performance Metrics
 
 Dice Coefficient and Dice Loss
 	  	Dice Coefficient = (2 × | GT ∩ SEG | ) / (GT2 + SEG2 + ε)
 Where, GT is the standard ground truth for brain tumor, SEG is the predicted segmented tumorous region and ε=1e-6.
   		LDice = 1 - Dice Coefficient
 
-##7. Experimentation and Results
+## 7. Experimentation and Results
 
 1. Data split into 3:1:1- 60% images for training, 20% images for testing, and 20% for validation.
 2. All the models are trained with batch size-8 and no of epochs-30
 
-##8. Conclusion
+## 8. Conclusion
 
 1. Several Deep Learning and Image processing techniques were studied in the due course of the project. 
 2. We completed research work with current usage of techniques in image preprocessing, image segmentation, common feature extraction and classification recently used were
