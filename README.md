@@ -1,7 +1,7 @@
 # Brain-Tumor-Segmentation-Using-Deep-Neural-Networks
 
 ## Description
-This project presents the use of deep learning and image processing techniques for the segmentation of tumors into various classes. We used the following three approaches for tumor segmentation.
+This project presents the use of deep learning and image processing techniques for the segmentation of tumors into different region. We used the following three approaches for segmentation of glioma brain tumor.
 1) The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
 2) The second approach proposes a V-Net model architecture for tumor segmentation.
 3) The third approach proposes a W-Net model architecture for tumor segmentation.
@@ -29,10 +29,10 @@ This project presents the use of deep learning and image processing techniques f
 
 The models were trained using 3 approaches:
 1) The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
-2) The second approach proposes a V-Net model architecture for tumor segmentation.
-3) The third approach proposes a W-Net model architecture for tumor segmentation.
+2) The second approach proposes V-Net model architecture for tumor segmentation.
+3) The third approach proposes W-Net model architecture for tumor segmentation.
 
-## 4. Experimentation and Results
+## 4. Experimentation
 
 1. HGG consists of data of 210 patients. The models were trained in batches of 50 patients.
 2. Data split into 3:1:1- 60% images for training, 20% images for testing, and 20% for validation.
