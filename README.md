@@ -81,4 +81,4 @@ Link to website: https://bts-seg.anvil.app/
 
 ## 9. Contributors
 
-[Prof. Sonal Gore](mailto:sonalgore@gmail.com), [Ashwin Mohan](mailto:mohanashwin999@gmail.com), [Prajakta Bhosale](mailto:prajatabhosale3333@gmail.com), [Prajakta Joshi](mailto:prajakta.joshi1999@gmail.com), [Ashley George](mailto:ashleygeorge1999@gmail.com) - Pimpri Chinchwad College of Engineering, Pune, Maharashtra India.
+[Sonal Gore](mailto:sonalgore@gmail.com), [Ashwin Mohan](mailto:mohanashwin999@gmail.com), [Prajakta Bhosale](mailto:prajatabhosale3333@gmail.com), [Prajakta Joshi](mailto:prajakta.joshi1999@gmail.com), [Ashley George](mailto:ashleygeorge1999@gmail.com) - Pimpri Chinchwad College of Engineering, Pune, Maharashtra India.
