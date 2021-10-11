@@ -83,4 +83,4 @@ Link to website: https://bts-seg.anvil.app/
 
 [Sonal Gore](mailto:sonalgore@gmail.com), [Ashwin Mohan](mailto:mohanashwin999@gmail.com), [Prajakta Bhosale](mailto:prajatabhosale3333@gmail.com), [Prajakta Joshi](mailto:prajakta.joshi1999@gmail.com), [Ashley George](mailto:ashleygeorge1999@gmail.com) - Pimpri Chinchwad College of Engineering, Pune, Maharashtra India.
 
-[Dr. Jayant Jagtap](mailto:jayantjagtap87@gmail.com) - Symbiosis Institute of Technology, Pune.
+[Dr. Jayant Jagtap](mailto:jayantjagtap87@gmail.com) - Symbiosis Institute of Technology, Pune, Maharashtra, India.
