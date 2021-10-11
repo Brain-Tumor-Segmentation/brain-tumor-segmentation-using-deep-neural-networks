@@ -2,9 +2,9 @@
 
 ## Description
 This project presents the use of deep learning and image processing techniques for the segmentation of tumors into different region. We used the following three approaches for segmentation of glioma brain tumor.
-1) The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
-2) The second approach proposes a V-Net model architecture for tumor segmentation.
-3) The third approach proposes a W-Net model architecture for tumor segmentation.
+1. The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
+2. The second approach proposes a V-Net model architecture for tumor segmentation.
+3. The third approach proposes a W-Net model architecture for tumor segmentation.
 
 ## 1. Dataset
 
@@ -28,9 +28,9 @@ This project presents the use of deep learning and image processing techniques f
 ## 3. Training
 
 The models were trained using 3 approaches:
-1) The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
-2) The second approach proposes V-Net model architecture for tumor segmentation.
-3) The third approach proposes W-Net model architecture for tumor segmentation.
+1. The first approach is a hybrid system within which we use Sobel operator which is an Image Processing technique for edge clarification and a modified U-Net which is a Deep Learning Neural Network for training. 
+2. The second approach proposes V-Net model architecture for tumor segmentation.
+3. The third approach proposes W-Net model architecture for tumor segmentation.
 
 ## 4. Experimentation
 
